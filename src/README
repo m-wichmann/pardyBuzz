@@ -1,0 +1,13 @@
+# pardyBuzz Firmware
+This firmware basically just uses the V-USB stack and the INT0 Interrupt.
+
+The buzzer implements a USB control endpoint, as well as an interrupt endpoint. The control endpoint is used to get and set the device id (bRequest == 0). Reading of the device id is done by sending the parameter 0x00. Every other value sets the id to that value. The interrupt endpoint is used to signal a button push. Everytime the button interrupt occurs, the byte 0xa5 is send over this endpoint. Debouncing is not done in the firmware.
+
+Since the internal oscillator is used, calibration is used to optimize the USB timing. The function 'calibrateOscillator' is taken from some V-USB sample projects.
+
+# EEPROM
+1   -> Oscillator calibration
+2   -> Device ID
+
+
+

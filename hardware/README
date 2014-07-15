@@ -1,0 +1,10 @@
+# pardyBuzz Hardware
+This is a simple PCB that contains a ATtiny and the USB interface. A button should be soldered to the PB2 pin, since thats the interrupt pin.
+
+# BOM
+* 1x ATtiny25/45/85 (tested with ATtiny85)
+* 1x 100 nF
+* 2x 68 Ohm
+* 1x 1.5K Ohm
+* 2x 3.6 V Zener Diode
+
